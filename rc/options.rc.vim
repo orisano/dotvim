@@ -8,8 +8,8 @@ set wrapscan
 " Edit:
 set smarttab
 set expandtab
-set shiftwidth=2
 set shiftround
+set shiftwidth=4
 set autoindent smartindent
 set modelines=0
 set nomodeline
@@ -58,6 +58,7 @@ set helplang& helplang=en,ja
 let t:cwd = getcwd()
 
 " View:
+set number
 set list
 set listchars=tab:▸\ ,trail:-,extends:»,precedes:«,nbsp:%
 set laststatus=2
@@ -153,4 +154,3 @@ endfunction"}}}
 
 set conceallevel=2 concealcursor=niv
 set colorcolumn=79
-    
