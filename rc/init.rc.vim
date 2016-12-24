@@ -13,6 +13,10 @@ if !isdirectory($CACHE)
   call mkdir($CACHE, "p")
 endif
 
+if filereadable(expand("~/.local_vimrc"))
+  execute "source" expand("~/.local_vimrc")
+endif
+
 let s:dein_dir = finddir("dein.vim", ".;")
 if s:dein_dir != "" || &runtimepath !~ "/dein.vim"
   if s:dein_dir == "" && &runtimepath != "/dein.vim"
