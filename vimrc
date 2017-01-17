@@ -1,3 +1,3 @@
 if 1
-  execute 'source' fnmaemodify(expand("<sfile>"), ":h")."/rc/vimrc"
+  execute 'source' fnamemodify(expand("<sfile>"), ":h")."/rc/vimrc"
 endif
