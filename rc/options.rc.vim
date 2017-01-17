@@ -79,16 +79,8 @@ let &g:statusline="%{winnr('$')>1?'['.winnr().'/'.winnr('$')"
       \ '['.(&filetype!=''?&filetype.',':'')"
       \ . ".(&fenc!=''?&fenc:&enc).','.&ff.']' : ''}"
       \ . "%m%{printf('%'.(len(line('$'))+2).'d/%d',line('.'),line('$'))}"
-set linebreak
-set showbreak=\
-set breakat=\ \ ;:,!?
 set whichwrap+=h,l,<,>,[,],b,s,~
-if exists("+breakindent")
-  set breakindent
-  set wrap
-else
-  set nowrap
-endif
+set nowrap
 set shortmess=aTI
 set noshowmode
 if has("patch-7.4.314")
@@ -153,4 +145,3 @@ function! WidthPart(str, width) abort "{{{
 endfunction"}}}
 
 set conceallevel=2 concealcursor=niv
-set colorcolumn=79
